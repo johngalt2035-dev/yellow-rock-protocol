@@ -53,11 +53,93 @@
         <span class="badge b-dim">SMS</span>
     </div>
     <div class="hero-sub">
-        <a href="https://github.com/johngalt2035-dev/yellow-rock-protocol">Get Started</a>
+        <a href="#install-section">Get Started</a>
         <a href="https://github.com/johngalt2035-dev/yellow-rock-protocol/blob/main/SETUP.md" class="secondary">Setup Guide</a>
         <a href="https://johngalt2035-dev.github.io/yellow-rock-memory/" class="secondary">Memory System</a>
     </div>
 </header>
+
+<!-- ==================== INSTALL ==================== -->
+<section id="install-section">
+    <h2>Get Started</h2>
+
+    <div style="background:rgba(67,97,238,0.1);border:1px solid var(--blue);border-radius:10px;padding:18px 22px;margin-bottom:24px;">
+        <h4 style="color:var(--blue);margin-bottom:8px;">Yellow Rock is a two-part system</h4>
+        <p style="color:var(--muted);font-size:.88em;"><strong>Yellow Rock Protocol</strong> (this repo) provides the communication doctrine &mdash; 9 protocols, context router, templates. <strong><a href="https://johngalt2035-dev.github.io/yellow-rock-memory/">Yellow Rock Memory</a></strong> provides the forensic archive &mdash; message storage, escalation tracking, SHA-256 hashing. Both are built upon <a href="https://openclaw.ai">OpenClaw</a>.</p>
+    </div>
+
+    <!-- THREE INSTALLATION PATHS -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:24px;">
+
+        <!-- DOCKER -->
+        <div style="background:var(--surface);border:2px solid var(--accent);border-radius:14px;padding:28px;position:relative;">
+            <div style="position:absolute;top:-14px;left:20px;background:var(--accent);color:#fff;font-weight:800;font-size:.82em;padding:4px 16px;border-radius:12px;">DOCKER</div>
+            <h3 style="color:var(--accent);margin:8px 0 12px;font-size:1.15em;">Docker Installation</h3>
+            <p style="color:var(--text);font-size:.9em;margin-bottom:14px;">Full stack in containers. No Rust toolchain, no Node.js install. Protocol + Memory + OpenClaw.</p>
+            <div style="background:var(--bg);border-radius:8px;padding:14px;font-family:monospace;font-size:.76em;color:var(--accent);margin-bottom:14px;line-height:1.6;">
+                git clone ...yellow-rock-protocol.git<br>
+                git clone ...yellow-rock-memory.git<br>
+                cd yellow-rock-memory<br>
+                cp .env.example .env<br>
+                docker compose -f \<br>&nbsp;&nbsp;docker-compose.full.yml up -d
+            </div>
+            <p style="color:var(--muted);font-size:.82em;margin-bottom:8px;">Requires: <strong>OrbStack</strong>, Docker Desktop, or <strong>Colima</strong></p>
+            <p style="margin-top:12px;"><a href="#docker-install" onclick="document.querySelector('#docker-install').scrollIntoView({behavior:'smooth'});return false;" style="background:var(--accent);color:#fff;padding:8px 20px;border-radius:8px;font-weight:600;font-size:.88em;display:inline-block;">Docker Guide &darr;</a></p>
+        </div>
+
+        <!-- AI INSTALL -->
+        <div style="background:var(--surface);border:2px solid var(--blue);border-radius:14px;padding:28px;position:relative;">
+            <div style="position:absolute;top:-14px;left:20px;background:var(--blue);color:#fff;font-weight:800;font-size:.82em;padding:4px 16px;border-radius:12px;">AI-ASSISTED</div>
+            <h3 style="color:var(--blue);margin:8px 0 12px;font-size:1.15em;">AI Installation</h3>
+            <p style="color:var(--text);font-size:.9em;margin-bottom:14px;">Copy one prompt into Claude Code, ChatGPT, or OpenClaw. Your AI handles everything.</p>
+            <div style="background:var(--bg);border-radius:8px;padding:14px;font-family:monospace;font-size:.76em;color:var(--blue);margin-bottom:14px;line-height:1.6;">
+                Install Yellow Rock Protocol from<br>
+                github.com/johngalt2035-dev/<br>&nbsp;&nbsp;yellow-rock-protocol<br><br>
+                Clone, configure for my contact<br>
+                named [NAME], and set up with<br>
+                Yellow Rock Memory on port 9077.
+            </div>
+            <p style="color:var(--muted);font-size:.82em;margin-bottom:8px;">Works with: <strong>OpenClaw</strong> &middot; <strong>Claude Code</strong> &middot; <strong>ChatGPT</strong></p>
+            <p style="margin-top:12px;"><a href="https://github.com/johngalt2035-dev/yellow-rock-protocol/blob/main/AI-INSTALL.md" style="background:var(--blue);color:#fff;padding:8px 20px;border-radius:8px;font-weight:600;font-size:.88em;display:inline-block;">AI Install Guide &rarr;</a></p>
+        </div>
+
+        <!-- MANUAL -->
+        <div style="background:var(--surface);border:2px solid var(--green);border-radius:14px;padding:28px;position:relative;">
+            <div style="position:absolute;top:-14px;left:20px;background:var(--green);color:#000;font-weight:800;font-size:.82em;padding:4px 16px;border-radius:12px;">MANUAL</div>
+            <h3 style="color:var(--green);margin:8px 0 12px;font-size:1.15em;">Human Installation</h3>
+            <p style="color:var(--text);font-size:.9em;margin-bottom:14px;">Step-by-step commands. Clone, copy the template, paste into your AI. Done.</p>
+            <div style="background:var(--bg);border-radius:8px;padding:14px;font-family:monospace;font-size:.76em;color:var(--green);margin-bottom:14px;line-height:1.6;">
+                git clone https://github.com/<br>&nbsp;&nbsp;johngalt2035-dev/<br>&nbsp;&nbsp;yellow-rock-protocol.git<br>
+                cd yellow-rock-protocol<br>
+                cat templates/generic/<br>&nbsp;&nbsp;system-prompt.md | pbcopy
+            </div>
+            <div style="color:var(--muted);font-size:.82em;line-height:1.7;margin-bottom:8px;">
+                <strong style="color:var(--green);">macOS</strong> &middot; <strong style="color:var(--blue);">Windows</strong> &middot; <strong style="color:var(--yellow);">Ubuntu/Debian</strong> &middot; <strong style="color:var(--accent);">Fedora/RHEL</strong>
+            </div>
+            <p style="margin-top:12px;"><a href="https://github.com/johngalt2035-dev/yellow-rock-protocol/blob/main/INSTALL.md" style="background:var(--green);color:#000;padding:8px 20px;border-radius:8px;font-weight:600;font-size:.88em;display:inline-block;">Manual Install Guide &rarr;</a></p>
+        </div>
+    </div>
+
+    <!-- QUICK REFERENCE -->
+    <h3 style="color:var(--muted);margin-bottom:14px;">Which Template Do I Use?</h3>
+    <table>
+        <thead><tr><th>Platform</th><th>Template</th><th>What to Do</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Any AI</strong> (ChatGPT, Claude, Grok, Gemini)</td><td><code>templates/generic/system-prompt.md</code></td><td>Paste into system instructions</td></tr>
+            <tr><td><strong>Claude Code</strong></td><td><code>templates/claude-code/CLAUDE.md</code></td><td>Copy to project root as <code>CLAUDE.md</code></td></tr>
+            <tr><td><strong>OpenClaw</strong></td><td><code>templates/openclaw/SOUL.md</code></td><td>Copy to agent workspace</td></tr>
+            <tr><td><strong>Ollama</strong> (local, free)</td><td><code>templates/generic/system-prompt.md</code></td><td><code>ollama run llama3.2:8b --system "$(cat ...)"</code></td></tr>
+            <tr><td><strong>Docker</strong> (full stack)</td><td><code>templates/openclaw/SOUL.md</code></td><td>Auto-mounted into OpenClaw container</td></tr>
+        </tbody>
+    </table>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-top:20px;">
+        <h4 style="color:var(--green);margin-bottom:8px;font-size:.95em;">After Installing</h4>
+        <p style="color:var(--muted);font-size:.85em;margin-bottom:6px;"><strong>1.</strong> Replace <code>[CONTACT_NAME]</code> or <code>{{CONTACT_NAME}}</code> in the template with the counterparty's name.</p>
+        <p style="color:var(--muted);font-size:.85em;margin-bottom:6px;"><strong>2.</strong> Configure per-contact settings &rarr; <a href="https://github.com/johngalt2035-dev/yellow-rock-protocol/blob/main/SETUP.md">SETUP.md</a></p>
+        <p style="color:var(--muted);font-size:.85em;"><strong>3.</strong> Install <a href="https://johngalt2035-dev.github.io/yellow-rock-memory/">Yellow Rock Memory</a> for forensic archive, escalation tracking, and SHA-256 provenance.</p>
+    </div>
+</section>
 
 <!-- DESIGN PRINCIPLES -->
 <section>
@@ -335,50 +417,6 @@
     </div>
 </section>
 
-<!-- DOCKER DEPLOYMENT -->
-<section>
-    <h2>Docker Deployment</h2>
-    <p style="color:var(--muted);margin-bottom:18px;">Deploy the full Yellow Rock stack with Docker. One command, persistent storage, bearer token auth, non-root container.</p>
-
-    <div style="background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:24px;margin-bottom:20px;">
-        <h4 style="color:var(--accent);margin-bottom:14px;">Quick Start</h4>
-        <div style="background:var(--bg);border-radius:6px;padding:14px 18px;font-family:monospace;font-size:.88em;color:var(--green);line-height:1.8;overflow-x:auto;">
-            git clone https://github.com/johngalt2035-dev/yellow-rock-memory.git<br>
-            cd yellow-rock-memory<br>
-            cp .env.example .env<br>
-            <span style="color:var(--muted);"># Edit .env — set GRM_API_KEY and GRM_PRINCIPAL_ID</span><br>
-            docker compose up -d
-        </div>
-        <p style="color:var(--muted);font-size:.85em;margin-top:12px;">Memory daemon running at <code>http://127.0.0.1:9077</code>. Data persists in Docker volume across restarts and upgrades.</p>
-    </div>
-
-    <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="card" style="border-color:var(--green);">
-            <h4 style="color:var(--green);">Secure by Default</h4>
-            <p>Non-root container. Localhost-only binding. Bearer token auth on all draft endpoints. Fail-closed: no key = no access.</p>
-        </div>
-        <div class="card" style="border-color:var(--blue);">
-            <h4 style="color:var(--blue);">Persistent Storage</h4>
-            <p>SQLite database in Docker volume. Survives container restarts, upgrades, and rebuilds. Easy backup/restore.</p>
-        </div>
-        <div class="card" style="border-color:var(--yellow);">
-            <h4 style="color:var(--yellow);">Environment Config</h4>
-            <p><code>GRM_API_KEY</code> — bearer token auth. <code>GRM_PRINCIPAL_ID</code> — principal identity enforcement. <code>RUST_LOG</code> — log verbosity.</p>
-        </div>
-    </div>
-
-    <table style="margin-top:18px;">
-        <thead><tr><th>Command</th><th>Description</th></tr></thead>
-        <tbody>
-            <tr><td><code>docker compose up -d</code></td><td>Start the daemon (background)</td></tr>
-            <tr><td><code>docker compose logs -f</code></td><td>Watch logs</td></tr>
-            <tr><td><code>docker compose down</code></td><td>Stop (data preserved)</td></tr>
-            <tr><td><code>curl localhost:9077/api/v1/health</code></td><td>Health check</td></tr>
-        </tbody>
-    </table>
-    <p style="color:var(--muted);font-size:.85em;margin-top:14px;">Full guide: <a href="https://github.com/johngalt2035-dev/yellow-rock-memory/blob/main/DOCKER.md">DOCKER.md</a>. Production: add TLS via Caddy/nginx reverse proxy.</p>
-</section>
-
 <!-- SYMBIOTIC SYSTEM -->
 <section>
     <h2>Designed for OpenClaw</h2>
@@ -404,6 +442,190 @@
             <tr><td><strong>Safety Planning</strong></td><td>Victim-safety practice</td><td>Abuse, stalking, credible threats, coercive control</td></tr>
         </tbody>
     </table>
+</section>
+
+<!-- DOCKER INSTALLATION -->
+<section id="docker-install">
+    <h2>Docker Installation</h2>
+    <p style="color:var(--muted);margin-bottom:18px;">Yellow Rock Protocol is a set of text templates &mdash; nothing to build or compile. In a Docker deployment, templates are <strong>volume-mounted read-only</strong> into the OpenClaw gateway alongside <a href="https://johngalt2035-dev.github.io/yellow-rock-memory/">Yellow Rock Memory</a>.</p>
+
+    <!-- PREREQUISITES -->
+    <div style="background:rgba(67,97,238,0.1);border:1px solid var(--blue);border-radius:10px;padding:18px 22px;margin-bottom:24px;">
+        <h4 style="color:var(--blue);margin-bottom:8px;">Prerequisites</h4>
+        <p style="color:var(--muted);font-size:.88em;margin-bottom:6px;"><strong>Docker Engine</strong> + <strong>Docker Compose v2</strong> are required. On macOS you also need a container runtime:</p>
+        <table style="margin-top:10px;">
+            <thead><tr><th>Runtime</th><th>Install</th><th>Notes</th></tr></thead>
+            <tbody>
+                <tr><td><strong style="color:var(--green);">OrbStack</strong></td><td><code>brew install orbstack</code></td><td>Recommended. Lightweight, fast startup, no VM download</td></tr>
+                <tr><td>Docker Desktop</td><td><a href="https://www.docker.com/products/docker-desktop/">docker.com</a></td><td>Official. Requires commercial license for organizations</td></tr>
+                <tr><td>Colima</td><td><code>brew install colima docker</code></td><td>Free, open-source. Downloads ~600MB VM on first start</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ARCHITECTURE -->
+    <h3>Architecture</h3>
+    <div style="background:var(--surface);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px;margin-bottom:20px;">
+        <div style="background:var(--bg);border-radius:6px;padding:16px;font-family:monospace;font-size:.82em;color:var(--muted);line-height:1.8;">
+            <span style="color:var(--green);font-weight:700;">docker compose -f docker-compose.full.yml up -d</span><br>
+            <br>
+            <span style="color:var(--blue);">openclaw-gateway</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :18789 &nbsp; <span style="color:var(--muted);">(AI gateway + Control UI)</span><br>
+            &nbsp;&nbsp;&#9500;&mdash; <span style="color:var(--yellow);">SOUL.md, AGENTS.md</span> &nbsp;&nbsp; <span style="color:var(--muted);">(agent identity, bind-mounted)</span><br>
+            &nbsp;&nbsp;&#9500;&mdash; <span style="color:var(--yellow);">yellow-rock-protocol/</span> <span style="color:var(--muted);">(templates, read-only mount)</span><br>
+            &nbsp;&nbsp;&#9492;&mdash; connects to &rarr; <span style="color:var(--green);">memory</span><br>
+            <br>
+            <span style="color:var(--green);">yellow-rock-memory</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :9077 &nbsp; <span style="color:var(--muted);">(Rust daemon)</span><br>
+            &nbsp;&nbsp;&#9500;&mdash; <span style="color:var(--yellow);">SQLite + forensic hashing</span><br>
+            &nbsp;&nbsp;&#9492;&mdash; /data/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:var(--muted);">(Docker volume, persistent)</span>
+        </div>
+    </div>
+
+    <!-- QUICK START -->
+    <h3>Quick Start</h3>
+    <div style="background:var(--surface);border:2px solid var(--green);border-radius:12px;padding:24px;margin-bottom:20px;">
+        <div style="background:var(--bg);border-radius:6px;padding:14px;font-family:monospace;font-size:.82em;color:var(--green);line-height:1.8;">
+            <span style="color:var(--muted);"># 1. Clone both repos side by side</span><br>
+            git clone https://github.com/johngalt2035-dev/yellow-rock-protocol.git<br>
+            git clone https://github.com/johngalt2035-dev/yellow-rock-memory.git<br>
+            <br>
+            <span style="color:var(--muted);"># 2. Configure</span><br>
+            cd yellow-rock-memory<br>
+            cp .env.example .env<br>
+            <span style="color:var(--muted);"># Edit .env &mdash; set GRM_API_KEY, GRM_PRINCIPAL_ID,</span><br>
+            <span style="color:var(--muted);"># OPENCLAW_GATEWAY_TOKEN, and at least one AI provider key</span><br>
+            <br>
+            <span style="color:var(--muted);"># 3. Run OpenClaw onboarding (first time only)</span><br>
+            docker compose -f docker-compose.full.yml \<br>
+            &nbsp;&nbsp;run --rm --no-deps --entrypoint node \<br>
+            &nbsp;&nbsp;openclaw-gateway dist/index.js onboard \<br>
+            &nbsp;&nbsp;--mode local --no-install-daemon<br>
+            <br>
+            <span style="color:var(--muted);"># 4. Launch the full stack</span><br>
+            docker compose -f docker-compose.full.yml up -d
+        </div>
+        <p style="color:var(--muted);font-size:.85em;margin-top:14px;">Template updates are instant &mdash; just <code>git pull</code> in the protocol repo. No container restart needed.</p>
+    </div>
+
+    <!-- ENVIRONMENT VARIABLES -->
+    <h3>Environment Variables</h3>
+    <p style="color:var(--muted);font-size:.88em;margin-bottom:10px;">All variables go in <code>.env</code> (in the yellow-rock-memory directory). Generate keys with <code>openssl rand -hex 32</code>.</p>
+    <table>
+        <thead><tr><th>Variable</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><code>GRM_API_KEY</code></td><td><strong style="color:var(--accent);">Yes</strong></td><td>Bearer token for memory draft endpoints</td></tr>
+            <tr><td><code>GRM_PRINCIPAL_ID</code></td><td><strong style="color:var(--accent);">Yes</strong></td><td>Your identifier &mdash; blocks misuse as a contact</td></tr>
+            <tr><td><code>OPENCLAW_GATEWAY_TOKEN</code></td><td><strong style="color:var(--accent);">Yes</strong></td><td>Gateway authentication token</td></tr>
+            <tr><td><code>XAI_API_KEY</code></td><td><strong style="color:var(--accent);">Yes*</strong></td><td>xAI/Grok key (* at least one AI provider required)</td></tr>
+            <tr><td><code>ANTHROPIC_API_KEY</code></td><td>No</td><td>Anthropic/Claude key (alternative provider)</td></tr>
+            <tr><td><code>OPENAI_API_KEY</code></td><td>No</td><td>OpenAI key (alternative provider)</td></tr>
+            <tr><td><code>OPENCLAW_TZ</code></td><td>No</td><td>Timezone, e.g. <code>America/New_York</code></td></tr>
+            <tr><td><code>RUST_LOG</code></td><td>No</td><td>Memory log level: <code>info</code> (default)</td></tr>
+        </tbody>
+    </table>
+
+    <!-- CONNECT MEMORY TO OPENCLAW -->
+    <h3>Connect Memory to OpenClaw</h3>
+    <p style="color:var(--muted);font-size:.88em;margin-bottom:10px;">Inside Docker, the memory daemon is reachable at <code>http://memory:9077</code>. Configure OpenClaw to use it:</p>
+    <div style="background:var(--bg);border-radius:6px;padding:14px;font-family:monospace;font-size:.78em;color:var(--blue);line-height:1.8;margin-bottom:14px;">
+        docker compose -f docker-compose.full.yml \<br>
+        &nbsp;&nbsp;run --rm --profile cli openclaw-cli \<br>
+        &nbsp;&nbsp;config set agents.defaults.memorySearch.remote.baseUrl \<br>
+        &nbsp;&nbsp;"http://memory:9077/v1"
+    </div>
+
+    <!-- INSTALL SOUL.MD -->
+    <h3>Install Protocol Templates</h3>
+    <p style="color:var(--muted);font-size:.88em;margin-bottom:10px;">Templates are auto-mounted at <code>/home/node/.openclaw/workspace/yellow-rock-protocol/</code>. Copy the SOUL.md into the agent workspace:</p>
+    <div style="background:var(--bg);border-radius:6px;padding:14px;font-family:monospace;font-size:.78em;color:var(--green);line-height:1.8;margin-bottom:10px;">
+        cp ../yellow-rock-protocol/templates/openclaw/SOUL.md \<br>
+        &nbsp;&nbsp;./openclaw-workspace/SOUL.md<br>
+        <br>
+        <span style="color:var(--muted);"># Edit SOUL.md &mdash; replace placeholders:</span><br>
+        <span style="color:var(--muted);">#   {{USER_NAME}} &rarr; your name</span><br>
+        <span style="color:var(--muted);">#   {{CONTACT_NAME}} &rarr; counterparty name</span><br>
+        <span style="color:var(--muted);">#   {{CHANNEL}} &rarr; signal, telegram, whatsapp, sms</span>
+    </div>
+
+    <!-- ADD CHANNELS -->
+    <h3>Add Messaging Channels</h3>
+    <p style="color:var(--muted);font-size:.88em;margin-bottom:10px;">After the gateway is running, connect messaging platforms:</p>
+    <div style="background:var(--bg);border-radius:6px;padding:14px;font-family:monospace;font-size:.78em;color:var(--green);line-height:1.8;margin-bottom:10px;">
+        <span style="color:var(--muted);"># Telegram</span><br>
+        docker compose -f docker-compose.full.yml \<br>
+        &nbsp;&nbsp;run --rm --profile cli openclaw-cli \<br>
+        &nbsp;&nbsp;channels add --channel telegram --token "BOT_TOKEN"<br>
+        <br>
+        <span style="color:var(--muted);"># Signal</span><br>
+        docker compose -f docker-compose.full.yml \<br>
+        &nbsp;&nbsp;run --rm --profile cli openclaw-cli \<br>
+        &nbsp;&nbsp;channels add --channel signal<br>
+        <br>
+        <span style="color:var(--muted);"># WhatsApp (QR code)</span><br>
+        docker compose -f docker-compose.full.yml \<br>
+        &nbsp;&nbsp;run --rm --profile cli openclaw-cli \<br>
+        &nbsp;&nbsp;channels login
+    </div>
+    <p style="color:var(--muted);font-size:.85em;">The gateway hot-reloads channel config &mdash; no restart needed.</p>
+
+    <!-- VERIFY -->
+    <h3>Verify</h3>
+    <div style="background:var(--bg);border-radius:6px;padding:14px;font-family:monospace;font-size:.78em;color:var(--green);line-height:1.8;margin-top:8px;">
+        <span style="color:var(--muted);"># Memory health</span><br>
+        curl http://127.0.0.1:9077/api/v1/health<br>
+        <span style="color:var(--muted);"># {"service":"yellow-rock-memory","status":"ok"}</span><br>
+        <br>
+        <span style="color:var(--muted);"># OpenClaw liveness</span><br>
+        curl http://127.0.0.1:18789/healthz<br>
+        <br>
+        <span style="color:var(--muted);"># OpenClaw Control UI &mdash; paste OPENCLAW_GATEWAY_TOKEN</span><br>
+        <span style="color:var(--muted);"># http://127.0.0.1:18789/</span>
+    </div>
+
+    <!-- OPERATIONS -->
+    <h3>Day-to-Day</h3>
+    <table>
+        <thead><tr><th>Command</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><code>docker compose -f docker-compose.full.yml up -d</code></td><td>Start the full stack</td></tr>
+            <tr><td><code>docker compose -f docker-compose.full.yml logs -f</code></td><td>Watch all logs</td></tr>
+            <tr><td><code>docker compose -f docker-compose.full.yml down</code></td><td>Stop (data preserved)</td></tr>
+            <tr><td><code>cd ../yellow-rock-protocol && git pull</code></td><td>Update templates (instant, no restart)</td></tr>
+        </tbody>
+    </table>
+
+    <!-- SECURITY -->
+    <h3>Security</h3>
+    <div class="grid" style="grid-template-columns: repeat(3, 1fr);margin-top:8px;">
+        <div class="card" style="border-color:var(--green);">
+            <h4 style="color:var(--green);">Non-Root</h4>
+            <p>Memory runs as <code>yrm</code>. OpenClaw runs as <code>node</code> (uid 1000). CLI drops <code>NET_RAW</code>/<code>NET_ADMIN</code>.</p>
+        </div>
+        <div class="card" style="border-color:var(--blue);">
+            <h4 style="color:var(--blue);">Localhost Only</h4>
+            <p>All ports bound to <code>127.0.0.1</code>. Use a reverse proxy (Caddy, nginx) with TLS for production.</p>
+        </div>
+        <div class="card" style="border-color:var(--accent);">
+            <h4 style="color:var(--accent);">Token Auth</h4>
+            <p>Memory: <code>GRM_API_KEY</code>. Gateway: <code>OPENCLAW_GATEWAY_TOKEN</code>. No key = no access.</p>
+        </div>
+    </div>
+
+    <!-- PERSISTENCE -->
+    <h3>What Persists</h3>
+    <table>
+        <thead><tr><th>Data</th><th>Location</th><th>Survives Rebuild?</th></tr></thead>
+        <tbody>
+            <tr><td>Memory database</td><td>Docker volume (<code>yrm-data</code>)</td><td>Yes</td></tr>
+            <tr><td>OpenClaw config</td><td>Host dir (<code>openclaw-config/</code>)</td><td>Yes</td></tr>
+            <tr><td>Agent workspaces</td><td>Host dir (<code>openclaw-workspace/</code>)</td><td>Yes</td></tr>
+            <tr><td>Protocol templates</td><td>Host dir (<code>../yellow-rock-protocol/</code>)</td><td>Yes (read-only)</td></tr>
+        </tbody>
+    </table>
+
+    <p style="margin-top:20px;">
+        <a href="https://github.com/johngalt2035-dev/yellow-rock-protocol/blob/main/DOCKER.md" style="background:var(--green);color:#000;padding:8px 20px;border-radius:8px;font-weight:600;font-size:.9em;display:inline-block;">Protocol Docker Guide &rarr;</a>
+        <a href="https://github.com/johngalt2035-dev/yellow-rock-memory/blob/main/DOCKER.md" style="background:var(--blue);color:#fff;padding:8px 20px;border-radius:8px;font-weight:600;font-size:.9em;display:inline-block;margin-left:8px;">Memory Docker Guide &rarr;</a>
+    </p>
 </section>
 
 <!-- LEGAL NOTICES -->
