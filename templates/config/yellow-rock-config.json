@@ -108,7 +108,7 @@
   },
 
   "memory": {
-    "database": "grey-rock-memory.db",
+    "database": "yellow-rock-memory.db",
     "port": 9077,
     "api_key_env": "GRM_API_KEY",
     "principal_id_env": "GRM_PRINCIPAL_ID",

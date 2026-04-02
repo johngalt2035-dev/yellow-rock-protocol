@@ -1,6 +1,6 @@
 # Messaging Platform Setup Guides
 
-Grey Rock supports multiple messaging platforms. Choose the one(s) your contacts use.
+Yellow Rock supports multiple messaging platforms. Choose the one(s) your contacts use.
 
 ## Signal
 
@@ -11,7 +11,7 @@ Grey Rock supports multiple messaging platforms. Choose the one(s) your contacts
 1. Install signal-cli: `brew install signal-cli` (Mac) or download from [github.com/AsamK/signal-cli](https://github.com/AsamK/signal-cli)
 2. Link as a secondary device:
    ```bash
-   signal-cli link -n "grey-rock"
+   signal-cli link -n "yellow-rock"
    ```
 3. Scan the QR code with Signal on your phone (Settings > Linked Devices)
 4. In config:
@@ -150,9 +150,9 @@ You can enable multiple platforms simultaneously. Each contact in your config sp
 
 ```json
 "contacts": [
-  { "id": "opposing-counsel", "channels": ["signal", "sms"], "primary_channel": "signal", "protocol": "grey-rock" },
-  { "id": "neighbor", "channels": ["whatsapp"], "primary_channel": "whatsapp", "protocol": "grey-rock" },
-  { "id": "coworker", "channels": ["telegram", "sms"], "primary_channel": "telegram", "protocol": "grey-rock" }
+  { "id": "opposing-counsel", "channels": ["signal", "sms"], "primary_channel": "signal", "protocol": "yellow-rock" },
+  { "id": "neighbor", "channels": ["whatsapp"], "primary_channel": "whatsapp", "protocol": "yellow-rock" },
+  { "id": "coworker", "channels": ["telegram", "sms"], "primary_channel": "telegram", "protocol": "yellow-rock" }
 ]
 ```
 

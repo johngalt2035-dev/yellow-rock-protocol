@@ -163,7 +163,7 @@
           "reflective listening"
         ],
         "avoid": [
-          "Grey Rock",
+          "Yellow Rock",
           "Yellow Rock unless tone control is needed"
         ]
       },
@@ -253,7 +253,7 @@
         "family court",
         "shared-custody logistics"
       ],
-      "essence": "Grey Rock substance with a warmer professional tone.",
+      "essence": "Yellow Rock substance with a warmer professional tone.",
       "core_moves": [
         "polite greeting optional",
         "1-5 concise sentences",
@@ -304,7 +304,7 @@
         "inviting endless dialogue"
       ]
     },
-    "grey_rock": {
+    "yellow_rock": {
       "fit": [
         "low-value contact with baiting individuals",
         "short unavoidable interactions"
@@ -552,7 +552,7 @@
       "default": [
         "NVC",
         "DEAR MAN",
-        "Grey Rock for baiters"
+        "Yellow Rock for baiters"
       ],
       "special": {
         "repairable_conflict": "Use observation + impact + request.",

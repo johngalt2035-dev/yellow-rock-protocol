@@ -1,36 +1,35 @@
 # Roadmap
 
-## v5.0 (Current)
+## v6.0 (Current)
 
-The current release focuses on research grounding, structured reasoning, and community foundation:
+The v6.0 release transforms Yellow Rock from a single-protocol BIFF system into a context-routed multi-protocol high-conflict interaction doctrine:
 
-- **Research grounding**: Full evidence documentation with citations, scope notes, and honest limitations (`docs/RESEARCH.md`)
-- **Risks matrix**: Documented risks of grey rocking with mitigation strategies (`docs/SAFETY.md`)
-- **Chain-of-Thought prompting**: 8-step structured reasoning chain for consistent response generation
-- **EAR statements**: Eddy's Empathy-Attention-Respect method for Level 4 urgent matters
-- **Hybrid communication modes**: Grey Rock Strict, Grey Rock Cooperative, and Normal modes per-contact
-- **Simulation scenarios**: Interactive examples for litigation, vendor disputes, and board conflicts (`examples/scenarios.md`)
-- **Contribution framework**: Guidelines for research, code, and documentation contributions (`CONTRIBUTING.md`)
+- **Context router**: Three-step classification engine (risk level, counterparty state, objective) that selects the right protocol for each interaction
+- **9 protocols**: Yellow Rock, BIFF, Grey Rock, DEAR MAN, GIVE/FAST, NVC, Motivational Interviewing/OARS, Documentation-First, Safety Planning
+- **Risk classification**: Four-level system (green/yellow/orange/red) with routing rules for each
+- **Counterparty classification**: Three-state model (reachable/rigid/unreachable)
+- **10 anti-manipulation filters**: Baiting, blame shifting, gish gallop, false urgency, reputation triangulation, selective outrage, moving goalposts, boundary testing, weaponized ambiguity, DARVO-like reversals -- each with specific response policies
+- **Universal truth engine**: Hard data rules, response layers (observation/inference/risk/action), forbidden moves
+- **6 use-case playbooks**: Family, business, workplace, friends/acquaintances, academic/SME, professional -- with domain-specific protocol selection and scenario handling
+- **5-level escalation framework**: Levels 0-4 from no-response-needed through attorney/law-enforcement pathway, with escalation triggers and review gates
+- **Canonical doctrine file**: `yellow-rock-doctrine.json` as the single source of truth for the entire protocol system
+- **Full system prompt**: Platform-agnostic `system-prompt.md` implementing the complete v6.0 doctrine
+- **Legal and ethical guardrails**: Must/must-not rules, instance constraints, privileged communications protection
+- **Draft review architecture**: Side-channel review, multi-reviewer chain support, SHA-256 forensic signing, timeout behavior
+- **Message integrity**: Zero deviation policy, source tracing, hallucination gates, no autonomous additions
+- **Per-contact configuration**: Protocol, risk level, counterparty state, context, and style per contact with real-time router override
 
-## v6.0 (Planned)
+## v7.0 (Planned)
 
-Core implementation and testing infrastructure:
+Advanced capabilities, new domains, and operational hardening:
 
-- **Core implementation code**: Python/JS agent wrapper implementing the protocol as executable code
-- **Unit tests for BIFF compliance scoring**: Automated validation that generated responses meet BIFF criteria (brevity, informativeness, neutrality, firmness)
-- **Hallucination resistance testing**: Test suite verifying the agent does not fabricate records, confirm unverified claims, or generate false details
-- **Analytics dashboard**: Message volume tracking, escalation trend visualization, extinction burst detection, and per-contact engagement metrics
-- **Draft review tracking**: `drafts` table (id, contact_id, incoming_message_id, draft_content, status, reviewer_actions, sent_at) for complete audit trail of the invisible side-channel review process
-
-## v7.0 (Future)
-
-Advanced capabilities and compliance:
-
-- **RAG + confidence scoring**: Retrieval-augmented generation with automatic escalation to principal review when confidence falls below 90% certainty
-- **A/B testing framework**: Systematic comparison of response variants to measure effectiveness across different contact types and conflict patterns
-- **GDPR/CCPA privacy alignment documentation**: Formal documentation of data handling practices, retention policies, and user rights for regulatory compliance
-- **Simulation/training interactive mode**: Interactive training environment where users can practice grey rock responses against simulated high-conflict scenarios
-- **Anonymized research contribution pipeline**: Infrastructure for users to optionally contribute anonymized interaction patterns to improve the protocol's evidence base
+- **Online / social media playbook**: Protocol selection and response templates for public-facing social media conflict, review-site disputes, and online harassment
+- **Multi-party conflict handling**: Routing logic for conversations involving more than two parties (group chats, CC'd emails, meeting contexts)
+- **Power-asymmetry dimension**: Explicit power-differential classification (employer/employee, professor/student, parent/minor) as a fourth router input alongside risk, counterparty, and objective
+- **Mid-conversation risk re-routing**: Dynamic protocol switching when risk level changes within a conversation thread (e.g., green-to-orange escalation triggers automatic protocol transition)
+- **Multi-reviewer chain enhancements**: Sequential and parallel review workflows, reviewer-specific authority levels, delegation rules
+- **JSON Schema validation**: Formal JSON Schema for `yellow-rock-doctrine.json` and `yellow-rock-config.json` with automated validation
+- **CI pipeline**: Automated checks for doctrine/config consistency, system-prompt synchronization with doctrine file, and template validation
 
 ## How to Influence the Roadmap
 

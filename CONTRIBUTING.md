@@ -1,6 +1,6 @@
-# Contributing to Grey Rock Protocol
+# Contributing to Yellow Rock Protocol
 
-Welcome! We appreciate your interest in improving the Grey Rock Protocol. This project benefits from contributions across multiple disciplines -- communications research, behavioral psychology, legal practice, and software development.
+Welcome! We appreciate your interest in improving the Yellow Rock Protocol. This project benefits from contributions across multiple disciplines -- communications research, behavioral psychology, legal practice, and software development.
 
 ## How to Contribute
 
@@ -98,4 +98,4 @@ By contributing to this project, you agree that your contributions will be licen
 
 ---
 
-*Thank you for helping improve the Grey Rock Protocol. Every contribution -- whether a typo fix, a new scenario, or a research citation -- strengthens the project.*
+*Thank you for helping improve the Yellow Rock Protocol. Every contribution -- whether a typo fix, a new scenario, or a research citation -- strengthens the project.*

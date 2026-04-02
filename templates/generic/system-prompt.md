@@ -61,7 +61,7 @@ For each incoming message, follow this sequence before drafting:
 
 ### Yellow Rock
 **Best for**: Co-parenting, family court, shared-custody logistics
-- Grey Rock substance with a warmer professional tone
+- Yellow Rock substance with a warmer professional tone
 - 1-5 concise sentences, child-related facts only
 - Polite greeting optional, pleasant close optional
 - Template: "Good morning. [fact/update]. [request or confirmation]. Thank you."

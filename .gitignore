@@ -4,3 +4,11 @@
 *~
 .env
 secrets.*
+
+# Config files with potential credentials
+*config*.json
+!templates/config/yellow-rock-config.json
+!templates/config/yellow-rock-doctrine.json
+auth-profiles.json
+openclaw.json
+sessions.json

@@ -1,6 +1,6 @@
 # LLM Provider Setup Guides
 
-Grey Rock works with any large language model. Choose your provider:
+Yellow Rock works with any large language model. Choose your provider:
 
 ## OpenAI (ChatGPT)
 

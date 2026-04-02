@@ -1,12 +1,12 @@
-# Getting Started with Grey Rock
+# Getting Started with Yellow Rock
 
-Set up your Executive Assistant utilizing the Grey Rock communications protocol in 5 minutes. No technical background required.
+Set up your Executive Assistant utilizing the Yellow Rock communications protocol in 5 minutes. No technical background required.
 
 ---
 
 ## Step 1: Choose Your AI Assistant (2 minutes)
 
-Grey Rock works with any AI. Pick one and get an API key:
+Yellow Rock works with any AI. Pick one and get an API key:
 
 | Provider | Best For | Cost | Get API Key |
 |----------|----------|------|-------------|
@@ -31,7 +31,7 @@ See the platform-specific guides in `templates/channels/` for detailed setup ins
 
 ## Step 3: Configure Your Contacts (3 minutes)
 
-Open the file `grey-rock-config.json` in any text editor and fill in:
+Open the file `yellow-rock-config.json` in any text editor and fill in:
 
 ### Your Info
 ```json
@@ -51,7 +51,7 @@ For each high-conflict counterparty, add an entry:
   "phone": "+15551234567",
   "channels": ["signal", "sms"],
   "primary_channel": "signal",
-  "protocol": "grey-rock",
+  "protocol": "yellow-rock",
   "communication_style": "executive"
 }
 ```
@@ -78,7 +78,7 @@ contacts:
     name: Contact A
     channels: [signal, sms]
     primary_channel: signal
-    protocol: grey-rock
+    protocol: yellow-rock
     communication_style: executive
 
   - id: trusted-colleague
@@ -122,7 +122,7 @@ Set `"communication_style"` per contact. The global default is configured in `co
 
 Messages are only sent during this window. Outside these hours, the system is silent.
 
-## Step 4: Install Grey Rock Memory (5-20 minutes)
+## Step 4: Install Yellow Rock Memory (5-20 minutes)
 
 Follow the installation guide for your platform: **[INSTALL.md](INSTALL.md)**
 - [macOS](#macos) | [Windows](#windows) | [Ubuntu](#ubuntu--debian) | [Fedora](#fedora--rhel--centos)
@@ -132,10 +132,10 @@ Or let your AI do it: **[AI-INSTALL.md](AI-INSTALL.md)**
 Once installed, start the memory system:
 ```bash
 # Mac / Linux:
-grey-rock-memory --db ~/.grey-rock/memory.db serve --port 9077
+yellow-rock-memory --db ~/.yellow-rock/memory.db serve --port 9077
 
 # Windows (PowerShell):
-grey-rock-memory --db "$env:USERPROFILE\.grey-rock\memory.db" serve --port 9077
+yellow-rock-memory --db "$env:USERPROFILE\.yellow-rock\memory.db" serve --port 9077
 ```
 
 ### Train with background knowledge (optional)
@@ -150,7 +150,7 @@ Create a file `background.json` with facts the system should know:
 
 Then import:
 ```bash
-grey-rock-memory --db ~/.grey-rock/memory.db train background.json
+yellow-rock-memory --db ~/.yellow-rock/memory.db train background.json
 ```
 
 ## Step 5: Test It
@@ -166,7 +166,7 @@ Send a test message and verify the system responds appropriately:
 If you're using OpenClaw, you can add contacts and training data by simply messaging your assistant via Signal, WhatsApp, Telegram, or SMS:
 
 **Add a contact:**
-> "Add opposing-counsel as a grey-rock executive contact on Signal: +15551234567"
+> "Add opposing-counsel as a yellow-rock executive contact on Signal: +15551234567"
 
 **Add training data:**
 > "Remember: Contact A works Mon-Fri 9-5. Standing meetings are Tuesdays at 3pm."
@@ -175,7 +175,7 @@ If you're using OpenClaw, you can add contacts and training data by simply messa
 > "Switch opposing-counsel to personal communication style"
 
 **Check current contacts:**
-> "List all my grey-rock contacts"
+> "List all my yellow-rock contacts"
 
 OpenClaw will update the configuration and memory system automatically. No files to edit.
 
@@ -200,7 +200,7 @@ The forensic archive system provides SHA-256 hash verification, but consult your
 - **Free cloud**: Google Gemini free tier
 
 **Q: Can I add more contacts later?**
-Yes. Edit `grey-rock-config.json` and add entries to the `contacts` array.
+Yes. Edit `yellow-rock-config.json` and add entries to the `contacts` array.
 
 ---
 

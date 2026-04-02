@@ -1,16 +1,16 @@
 # Installation Guide
 
-Install the Grey Rock Protocol on any platform. These are communication templates — no compilation needed, no programming required.
+Install the Yellow Rock Protocol on any platform. These are communication templates — no compilation needed, no programming required.
 
 > **No technical experience?** Skip to [AI-Assisted Installation](AI-INSTALL.md) — let ChatGPT, Claude, or your AI assistant do it for you.
 
-> **Documentation Map**: You are here → **INSTALL.md** (get the files). Next → [SETUP.md](SETUP.md) (configure). Then → [AI-INSTALL.md](AI-INSTALL.md) (connect + test). Companion → [Grey Rock Memory](https://github.com/johngalt2035-dev/grey-rock-memory) (forensic archive system).
+> **Documentation Map**: You are here → **INSTALL.md** (get the files). Next → [SETUP.md](SETUP.md) (configure). Then → [AI-INSTALL.md](AI-INSTALL.md) (connect + test). Companion → [Yellow Rock Memory](https://github.com/johngalt2035-dev/yellow-rock-memory) (forensic archive system).
 
 ---
 
 ## What You're Installing
 
-Grey Rock Protocol is a set of **text files** (templates) that tell your AI Executive Assistant how to respond to high-conflict individuals, groups, or business entities. There's nothing to compile or build — just download and use.
+Yellow Rock Protocol is a set of **text files** (templates) that tell your AI Executive Assistant how to respond to high-conflict individuals, groups, or business entities. There's nothing to compile or build — just download and use.
 
 ---
 
@@ -23,8 +23,8 @@ Open **Terminal** (Applications > Utilities > Terminal):
 xcode-select --install
 
 # Download the protocol
-git clone https://github.com/johngalt2035-dev/grey-rock-protocol.git
-cd grey-rock-protocol
+git clone https://github.com/johngalt2035-dev/yellow-rock-protocol.git
+cd yellow-rock-protocol
 
 # View the main template
 cat templates/generic/system-prompt.md
@@ -44,8 +44,8 @@ Open **PowerShell** (search Start menu for "PowerShell"):
 # Install git if needed — download from https://git-scm.com/ first
 
 # Download the protocol
-git clone https://github.com/johngalt2035-dev/grey-rock-protocol.git
-cd grey-rock-protocol
+git clone https://github.com/johngalt2035-dev/yellow-rock-protocol.git
+cd yellow-rock-protocol
 
 # View the main template
 Get-Content templates\generic\system-prompt.md
@@ -66,8 +66,8 @@ Write-Host "Template copied to clipboard! Paste it into your AI."
 sudo apt update && sudo apt install -y git
 
 # Download the protocol
-git clone https://github.com/johngalt2035-dev/grey-rock-protocol.git
-cd grey-rock-protocol
+git clone https://github.com/johngalt2035-dev/yellow-rock-protocol.git
+cd yellow-rock-protocol
 
 # Copy to clipboard (install xclip first)
 sudo apt install -y xclip
@@ -81,8 +81,8 @@ echo "Template copied to clipboard!"
 
 ```bash
 sudo dnf install -y git
-git clone https://github.com/johngalt2035-dev/grey-rock-protocol.git
-cd grey-rock-protocol
+git clone https://github.com/johngalt2035-dev/yellow-rock-protocol.git
+cd yellow-rock-protocol
 cat templates/generic/system-prompt.md
 ```
 
@@ -90,7 +90,7 @@ cat templates/generic/system-prompt.md
 
 ## No Git? Download ZIP Instead
 
-1. Go to [github.com/johngalt2035-dev/grey-rock-protocol](https://github.com/johngalt2035-dev/grey-rock-protocol)
+1. Go to [github.com/johngalt2035-dev/yellow-rock-protocol](https://github.com/johngalt2035-dev/yellow-rock-protocol)
 2. Click the green **"<> Code"** button
 3. Click **"Download ZIP"**
 4. Extract the ZIP to any folder
@@ -137,7 +137,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Download a model
 ollama pull llama3.2:8b
 
-# Run with the Grey Rock system prompt
+# Run with the Yellow Rock system prompt
 ollama run llama3.2:8b --system "$(cat templates/generic/system-prompt.md)"
 ```
 
@@ -163,7 +163,7 @@ Train the memory system with your communication patterns for each style.
 ]
 ```
 
-Import with: `grey-rock-memory --db ~/.grey-rock/memory.db train style-training.json`
+Import with: `yellow-rock-memory --db ~/.yellow-rock/memory.db train style-training.json`
 
 ### With OpenClaw (Full Automation)
 
@@ -182,12 +182,12 @@ After installing, copy and edit the config file:
 
 ```bash
 # Copy the template
-cp templates/config/grey-rock-config.json ~/grey-rock-config.json
+cp templates/config/yellow-rock-config.json ~/yellow-rock-config.json
 
 # Edit it with any text editor
-# macOS: open -e ~/grey-rock-config.json
-# Windows: notepad $env:USERPROFILE\grey-rock-config.json
-# Linux: nano ~/grey-rock-config.json
+# macOS: open -e ~/yellow-rock-config.json
+# Windows: notepad $env:USERPROFILE\yellow-rock-config.json
+# Linux: nano ~/yellow-rock-config.json
 ```
 
 See [SETUP.md](SETUP.md) for what each field means.
@@ -223,13 +223,13 @@ Replace `OPENAI_API_KEY` with `ANTHROPIC_API_KEY`, `XAI_API_KEY`, or `GOOGLE_API
 ## What's Inside
 
 ```
-grey-rock-protocol/
+yellow-rock-protocol/
 ├── templates/
 │   ├── generic/system-prompt.md      # Works with ANY AI ← start here
 │   ├── claude-code/CLAUDE.md         # Claude Code project file
 │   ├── openclaw/SOUL.md              # OpenClaw agent identity
 │   ├── openclaw/cron-jobs.json       # Automated jobs
-│   ├── config/grey-rock-config.json  # Configuration template
+│   ├── config/yellow-rock-config.json  # Configuration template
 │   ├── providers/README.md           # AI provider setup guides
 │   └── channels/README.md            # Messaging platform guides
 ├── docs/
@@ -244,9 +244,9 @@ grey-rock-protocol/
 
 ---
 
-## Companion: Grey Rock Memory
+## Companion: Yellow Rock Memory
 
-For forensic message archival, escalation tracking, and SHA-256 evidentiary chain, install [Grey Rock Memory](https://github.com/johngalt2035-dev/grey-rock-memory). See its [INSTALL.md](https://github.com/johngalt2035-dev/grey-rock-memory/blob/main/INSTALL.md) for platform-specific instructions.
+For forensic message archival, escalation tracking, and SHA-256 evidentiary chain, install [Yellow Rock Memory](https://github.com/johngalt2035-dev/yellow-rock-memory). See its [INSTALL.md](https://github.com/johngalt2035-dev/yellow-rock-memory/blob/main/INSTALL.md) for platform-specific instructions.
 
 The protocol (templates) + memory (database) work together as a symbiotic system, both built upon [OpenClaw](https://openclaw.ai).
 
@@ -281,11 +281,11 @@ The protocol (templates) + memory (database) work together as a symbiotic system
 
 1. **Configure your contacts** → [SETUP.md](SETUP.md)
 2. **Connect to your AI + test** → [AI-INSTALL.md](AI-INSTALL.md)
-3. **Install the memory system** → [Grey Rock Memory INSTALL.md](https://github.com/johngalt2035-dev/grey-rock-memory/blob/main/INSTALL.md)
+3. **Install the memory system** → [Yellow Rock Memory INSTALL.md](https://github.com/johngalt2035-dev/yellow-rock-memory/blob/main/INSTALL.md)
 
 ---
 
-*Grey Rock Protocol works with [Grey Rock Memory](https://github.com/johngalt2035-dev/grey-rock-memory). Both are built upon [OpenClaw](https://openclaw.ai). See [LICENSE](LICENSE) and [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md) for terms.*
+*Yellow Rock Protocol works with [Yellow Rock Memory](https://github.com/johngalt2035-dev/yellow-rock-memory). Both are built upon [OpenClaw](https://openclaw.ai). See [LICENSE](LICENSE) and [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md) for terms.*
 
 ---
 
