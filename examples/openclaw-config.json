@@ -1,0 +1,102 @@
+{
+  "_comment": "Example OpenClaw instance configuration for Grey Rock Protocol. Replace all {{PLACEHOLDERS}} with real values.",
+  "meta": {
+    "lastTouchedVersion": "2026.3.30"
+  },
+  "auth": {
+    "profiles": {
+      "xai:default": {
+        "provider": "xai",
+        "mode": "token"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "xai": {
+        "baseUrl": "https://api.x.ai/v1",
+        "apiKey": "{{XAI_API_KEY}}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "grok-4-1-fast-reasoning",
+            "name": "Grok 4.1 Fast (Reasoning)",
+            "reasoning": true,
+            "input": ["text"],
+            "contextWindow": 131072,
+            "maxTokens": 16384
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "xai/grok-4-1-fast-reasoning"
+      },
+      "workspace": "{{INSTANCE_DIR}}/workspace",
+      "humanDelay": {
+        "mode": "natural",
+        "minMs": 1500,
+        "maxMs": 8000
+      },
+      "maxConcurrent": 1
+    },
+    "list": [
+      {
+        "id": "{{AGENT_ID}}",
+        "name": "{{USER_NAME}} (Proxy)",
+        "workspace": "{{INSTANCE_DIR}}/workspace",
+        "agentDir": "{{INSTANCE_DIR}}/agents/{{AGENT_ID}}",
+        "model": {
+          "primary": "xai/grok-4-1-fast-reasoning"
+        },
+        "memorySearch": {
+          "enabled": false
+        }
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "{{AGENT_ID}}",
+      "match": {
+        "channel": "signal",
+        "accountId": "default"
+      }
+    }
+  ],
+  "channels": {
+    "signal": {
+      "enabled": true,
+      "account": "{{YOUR_SIGNAL_NUMBER}}",
+      "cliPath": "signal-cli",
+      "autoStart": true,
+      "dmPolicy": "allowlist",
+      "allowFrom": ["{{CONTACT_SIGNAL_NUMBER}}"],
+      "groupPolicy": "disabled",
+      "textChunkLimit": 4000,
+      "reactionLevel": "minimal"
+    }
+  },
+  "gateway": {
+    "port": 18790,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "password",
+      "password": "{{GATEWAY_PASSWORD}}"
+    }
+  },
+  "memory": {
+    "backend": "builtin"
+  },
+  "plugins": {
+    "entries": {
+      "signal": {
+        "enabled": true
+      }
+    }
+  }
+}

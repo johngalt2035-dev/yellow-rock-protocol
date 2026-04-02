@@ -1,0 +1,29 @@
+{
+  "_comment": "Grey Rock v5.0 — User-facing digest only. No autonomous outbound to contacts.",
+  "version": 1,
+  "jobs": [
+    {
+      "id": "grey-rock-digest",
+      "agentId": "{{AGENT_ID}}",
+      "name": "Daily Review Summary (User Only)",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 20 * * *",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "schedule",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "{{MODEL}}",
+        "message": "Generate a daily review summary for the USER (not for any contact). This is delivered to the user only.\n\nSummarize today's interactions:\n- Total messages received (with category breakdown: LOGISTICS, EMOTIONAL, ESCALATION_ALERT)\n- Logistics items (schedule changes, requests, commitments, deadlines)\n- Action items requiring the user's attention\n- Escalation alerts (if any)\n- Current escalation score\n\nNote: The full unmodified messages are always available in the archive. This summary extracts actionable items for the user's convenience.\n\nIf no interactions today: 'No interactions today.'\n\nDeliver to the user's review channel (not to any contact).",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "_comment": "Deliver to user only — never to a contact",
+        "mode": "internal"
+      }
+    }
+  ]
+}
