@@ -335,6 +335,50 @@
     </div>
 </section>
 
+<!-- DOCKER DEPLOYMENT -->
+<section>
+    <h2>Docker Deployment</h2>
+    <p style="color:var(--muted);margin-bottom:18px;">Deploy the full Yellow Rock stack with Docker. One command, persistent storage, bearer token auth, non-root container.</p>
+
+    <div style="background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:24px;margin-bottom:20px;">
+        <h4 style="color:var(--accent);margin-bottom:14px;">Quick Start</h4>
+        <div style="background:var(--bg);border-radius:6px;padding:14px 18px;font-family:monospace;font-size:.88em;color:var(--green);line-height:1.8;overflow-x:auto;">
+            git clone https://github.com/johngalt2035-dev/yellow-rock-memory.git<br>
+            cd yellow-rock-memory<br>
+            cp .env.example .env<br>
+            <span style="color:var(--muted);"># Edit .env — set GRM_API_KEY and GRM_PRINCIPAL_ID</span><br>
+            docker compose up -d
+        </div>
+        <p style="color:var(--muted);font-size:.85em;margin-top:12px;">Memory daemon running at <code>http://127.0.0.1:9077</code>. Data persists in Docker volume across restarts and upgrades.</p>
+    </div>
+
+    <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="card" style="border-color:var(--green);">
+            <h4 style="color:var(--green);">Secure by Default</h4>
+            <p>Non-root container. Localhost-only binding. Bearer token auth on all draft endpoints. Fail-closed: no key = no access.</p>
+        </div>
+        <div class="card" style="border-color:var(--blue);">
+            <h4 style="color:var(--blue);">Persistent Storage</h4>
+            <p>SQLite database in Docker volume. Survives container restarts, upgrades, and rebuilds. Easy backup/restore.</p>
+        </div>
+        <div class="card" style="border-color:var(--yellow);">
+            <h4 style="color:var(--yellow);">Environment Config</h4>
+            <p><code>GRM_API_KEY</code> — bearer token auth. <code>GRM_PRINCIPAL_ID</code> — principal identity enforcement. <code>RUST_LOG</code> — log verbosity.</p>
+        </div>
+    </div>
+
+    <table style="margin-top:18px;">
+        <thead><tr><th>Command</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><code>docker compose up -d</code></td><td>Start the daemon (background)</td></tr>
+            <tr><td><code>docker compose logs -f</code></td><td>Watch logs</td></tr>
+            <tr><td><code>docker compose down</code></td><td>Stop (data preserved)</td></tr>
+            <tr><td><code>curl localhost:9077/api/v1/health</code></td><td>Health check</td></tr>
+        </tbody>
+    </table>
+    <p style="color:var(--muted);font-size:.85em;margin-top:14px;">Full guide: <a href="https://github.com/johngalt2035-dev/yellow-rock-memory/blob/main/DOCKER.md">DOCKER.md</a>. Production: add TLS via Caddy/nginx reverse proxy.</p>
+</section>
+
 <!-- SYMBIOTIC SYSTEM -->
 <section>
     <h2>Designed for OpenClaw</h2>
