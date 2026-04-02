@@ -1,100 +1,144 @@
 {
-  "_comment": "Grey Rock v5.0 Configuration — edit this file and run your setup",
-  "version": "5.0",
+  "_comment": "Yellow Rock v6.0 Configuration — High-Conflict Interaction Doctrine",
+  "version": "6.0",
 
   "communication_style": {
     "default": "executive",
-    "_options": ["personal", "executive"]
+    "options": ["personal", "executive"]
   },
 
   "user": {
-    "name": "Your Name",
+    "name": "YOUR_NAME",
     "timezone": "America/New_York"
   },
 
-  "contacts": [
-    {
-      "id": "opposing-counsel",
-      "name": "Contact A",
-      "phone": "+1XXXXXXXXXX",
-      "channels": ["signal", "sms"],
-      "primary_channel": "signal",
-      "protocol": "grey-rock",
-      "communication_style": "executive",
+  "contacts": {
+    "opposing-counsel": {
+      "protocol": "biff",
+      "risk_level": "yellow",
+      "counterparty_state": "rigid",
+      "context": "professional",
+      "style": "executive",
       "escalation_threshold": 7,
-      "notes": "High-conflict counterparty. Full BIFF protocol."
+      "channel": "signal",
+      "notes": "Anchor to obligations, timelines, record quality. BIFF default, DEAR MAN for requests."
     },
-    {
-      "id": "difficult-vendor",
-      "name": "Contact B",
-      "phone": "+1XXXXXXXXXX",
-      "channels": ["whatsapp"],
-      "primary_channel": "whatsapp",
-      "protocol": "grey-rock",
-      "communication_style": "executive",
+    "co-parent": {
+      "protocol": "yellow-rock",
+      "risk_level": "yellow",
+      "counterparty_state": "unreachable",
+      "context": "family",
+      "style": "executive",
       "escalation_threshold": 5,
-      "notes": "Difficult vendor. Grey rock on contract disputes."
+      "channel": "signal",
+      "notes": "Child-focused, logistical, court-readable. Yellow Rock default."
     },
-    {
-      "id": "trusted-colleague",
-      "name": "Contact C",
-      "phone": "+1XXXXXXXXXX",
-      "channels": ["signal"],
-      "primary_channel": "signal",
+    "difficult-vendor": {
+      "protocol": "biff",
+      "risk_level": "green",
+      "counterparty_state": "rigid",
+      "context": "business",
+      "style": "executive",
+      "escalation_threshold": 5,
+      "channel": "signal",
+      "notes": "Use contracts, deliverables, deadlines as anchors. OARS if not hostile."
+    },
+    "team-member": {
+      "protocol": "nvc",
+      "risk_level": "green",
+      "counterparty_state": "reachable",
+      "context": "workplace",
+      "style": "personal",
+      "escalation_threshold": 8,
+      "channel": "signal",
+      "notes": "Good-faith dialogue. NVC + GIVE/FAST. Switch to BIFF if attacks begin."
+    },
+    "trusted-colleague": {
       "protocol": "normal",
-      "communication_style": "personal",
-      "notes": "Normal communication. No protocol applied."
+      "risk_level": "green",
+      "counterparty_state": "reachable",
+      "context": "professional",
+      "style": "personal",
+      "escalation_threshold": 9,
+      "channel": "signal",
+      "notes": "No protocol constraints. Natural communication."
     }
+  },
+
+  "protocol_options": [
+    "yellow-rock",
+    "biff",
+    "grey-rock",
+    "dear-man",
+    "nvc",
+    "mi-oars",
+    "documentation-first",
+    "safety-planning",
+    "normal"
   ],
 
-  "llm": {
-    "_comment": "Choose one: openai, claude, xai, gemini, ollama",
-    "provider": "openai",
-    "model": "gpt-4o",
-    "api_key_env": "OPENAI_API_KEY",
+  "risk_levels": ["green", "yellow", "orange", "red"],
+  "counterparty_states": ["reachable", "rigid", "unreachable"],
+  "contexts": ["family", "business", "workplace", "friends", "academic", "professional"],
 
-    "_alternatives": {
-      "claude": { "provider": "claude", "model": "claude-sonnet-4-20250514", "api_key_env": "ANTHROPIC_API_KEY" },
-      "xai": { "provider": "xai", "model": "grok-4-1-fast-reasoning", "api_key_env": "XAI_API_KEY" },
-      "gemini": { "provider": "gemini", "model": "gemini-2.5-pro", "api_key_env": "GOOGLE_API_KEY" },
-      "ollama": { "provider": "ollama", "model": "llama3.2:8b", "api_key_env": "none" }
+  "provider": {
+    "default": "openai",
+    "options": {
+      "openai": {
+        "model": "gpt-4o",
+        "api_key_env": "OPENAI_API_KEY"
+      },
+      "anthropic": {
+        "model": "claude-sonnet-4-20250514",
+        "api_key_env": "ANTHROPIC_API_KEY"
+      },
+      "xai": {
+        "model": "grok-4-1-fast-reasoning",
+        "api_key_env": "XAI_API_KEY"
+      },
+      "gemini": {
+        "model": "gemini-2.5-pro",
+        "api_key_env": "GOOGLE_AI_API_KEY"
+      },
+      "ollama": {
+        "model": "llama3.2:8b",
+        "base_url": "http://localhost:11434"
+      }
     }
   },
 
   "memory": {
-    "db_path": "~/.grey-rock/memory.db",
+    "database": "grey-rock-memory.db",
     "port": 9077,
+    "api_key_env": "GRM_API_KEY",
+    "principal_id_env": "GRM_PRINCIPAL_ID",
     "retention_days": 365
   },
 
   "message_window": {
-    "active_start": "07:00",
-    "active_end": "22:00",
     "timezone": "America/New_York",
-    "_comment": "Messages only sent/received during this window. Emergencies bypass."
+    "start_hour": 7,
+    "end_hour": 22,
+    "description": "Messages only sent/received during this window"
   },
 
   "channels": {
-    "_comment": "Configure which messaging platforms you use",
     "signal": {
       "enabled": true,
-      "account": "+1XXXXXXXXXX"
+      "provider": "signal-cli"
     },
     "telegram": {
       "enabled": false,
-      "bot_token": ""
+      "bot_token_env": "TELEGRAM_BOT_TOKEN"
     },
     "whatsapp": {
       "enabled": false,
-      "business_phone": "",
-      "api_token": ""
+      "provider": "meta-business-api"
     },
     "sms": {
       "enabled": false,
       "provider": "twilio",
-      "account_sid_env": "TWILIO_ACCOUNT_SID",
-      "auth_token_env": "TWILIO_AUTH_TOKEN",
-      "phone_number": "+1XXXXXXXXXX"
+      "api_key_env": "TWILIO_AUTH_TOKEN"
     }
   }
 }

@@ -1,29 +1,15 @@
 {
-  "_comment": "Grey Rock v5.0 — User-facing digest only. No autonomous outbound to contacts.",
+  "_comment": "Yellow Rock v6.0 — User-facing digest only. No autonomous outbound to contacts.",
   "version": 1,
   "jobs": [
     {
-      "id": "grey-rock-digest",
-      "agentId": "{{AGENT_ID}}",
+      "id": "yellow-rock-digest",
       "name": "Daily Review Summary (User Only)",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 20 * * *",
-        "tz": "America/New_York"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "schedule",
-      "payload": {
-        "kind": "agentTurn",
-        "model": "{{MODEL}}",
-        "message": "Generate a daily review summary for the USER (not for any contact). This is delivered to the user only.\n\nSummarize today's interactions:\n- Total messages received (with category breakdown: LOGISTICS, EMOTIONAL, ESCALATION_ALERT)\n- Logistics items (schedule changes, requests, commitments, deadlines)\n- Action items requiring the user's attention\n- Escalation alerts (if any)\n- Current escalation score\n\nNote: The full unmodified messages are always available in the archive. This summary extracts actionable items for the user's convenience.\n\nIf no interactions today: 'No interactions today.'\n\nDeliver to the user's review channel (not to any contact).",
-        "timeoutSeconds": 180
-      },
-      "delivery": {
-        "_comment": "Deliver to user only — never to a contact",
-        "mode": "internal"
-      }
+      "schedule": "0 20 * * *",
+      "timezone": "America/New_York",
+      "isolatedSession": true,
+      "deliverTo": "user",
+      "task": "Generate a daily review summary for the principal only. Include: messages categorized by protocol used (Yellow Rock, BIFF, Grey Rock, DEAR MAN, NVC, MI/OARS, Documentation-First, Safety Planning), risk levels encountered (green/yellow/orange/red), manipulation patterns detected (baiting, DARVO, gish gallop, false urgency, triangulation, goalposts, weaponized ambiguity), logistics items requiring action, pending action items, escalation alerts and their levels (0-4), escalation scoring trend. Format as a structured briefing. NEVER deliver this to contacts — this is a principal-only internal summary."
     }
   ]
 }
